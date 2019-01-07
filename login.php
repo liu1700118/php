@@ -5,9 +5,11 @@ header("Access-Control-Allow-Headers:content-type,xfilecategory,xfilename,xfiles
 $data=file_get_contents("php://input");
 $data=json_decode($data);
 $message=array('message'=>"success");
-if ($data->userName==123&&$data->passWord==123){
+if ($data->username==123 && $data->password==123){
     echo json_encode($message);
 }else{
     $message['message']='error';
     echo json_encode($message);
 }
+
+?>
